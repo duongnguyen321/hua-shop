@@ -13,8 +13,6 @@ import Checkout from "../pages/Checkout";
 import Error404 from "../pages/Error";
 import endpoint from "../config/endpoint";
 import Authorized from "./Authorized";
-import Profile from "../pages/Profile";
-import Login from "../pages/Auth/Login";
 export default function Routers() {
   const { home, products, orders, cart, checkout, profile, auth, error } =
     endpoint;

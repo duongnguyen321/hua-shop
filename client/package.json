@@ -11,7 +11,8 @@
     "sass": "^1.62.1"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"cd .. && cd server && npm start\""
+    "start": "concurrently \"react-scripts start\" \"cd .. && cd server && npm start\"",
+    "push": "git add . && git commit -m \"update code\" && git push"
   },
   "eslintConfig": {
     "extends": [
