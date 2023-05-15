@@ -13,6 +13,8 @@ import Checkout from "../pages/Checkout";
 import Error404 from "../pages/Error";
 import endpoint from "../config/endpoint";
 import Authorized from "./Authorized";
+import ProductsType from "../pages/Products/Type";
+
 export default function Routers() {
   const { home, products, orders, cart, checkout, profile, auth, error } =
     endpoint;
@@ -20,9 +22,10 @@ export default function Routers() {
   return (
     <Routes>
       <Route path={home} element={<Home />} />
-      <Route path={products}>
-        <Route path="" element={<Products />} />
-        <Route path=":id" element={<Product />} />
+      <Route path={products.root}>
+        <Route path={""} element={<Products />} />
+        <Route path={"type/:slug"} element={<ProductsType />} />
+        <Route path={":id"} element={<Product />} />
       </Route>
       <Route path={orders.root}>
         <Route path="" element={<Orders />} />

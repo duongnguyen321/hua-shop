@@ -43,14 +43,18 @@ body {
   header {
     * {
       user-select: none;
-    }
-  }
-  main {
-    * {
       transition: all 0.3s linear;
     }
   }
+  main {
+    margin-top: 7rem;
+    * {
+      @extend header;
+      user-select: text;
+    }
+  }
   footer {
-    @extend header;
+    @extend main;
+    margin-top: 0;
   }
 }

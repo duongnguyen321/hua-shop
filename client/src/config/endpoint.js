@@ -1,6 +1,10 @@
 const endpoint = {
   home: "/",
-  products: "/products",
+  products: {
+    root: "/products",
+    new: "new",
+    used: "used",
+  },
   orders: {
     root: "/orders",
     create: "create",
