@@ -13,13 +13,7 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"cd .. && cd server && npm start\"",
-    "push": "cd .. && git add . && git commit -m \"update code\" && git push"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "push": "node push.js"
   },
   "browserslist": {
     "production": [
@@ -32,5 +26,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "yargs": "^17.7.2"
   }
 }
