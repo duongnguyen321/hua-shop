@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"cd .. && cd server && npm start\"",
-    "push": "node push.js"
+    "push": "node script/push.js"
   },
   "browserslist": {
     "production": [
