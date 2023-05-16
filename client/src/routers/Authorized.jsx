@@ -31,7 +31,6 @@ export default function Authorized() {
       setLoading(false);
     }
   }, [userId, url, navigate, profile, auth]);
-console.log("render");
   if (loading) {
     return (
       <>

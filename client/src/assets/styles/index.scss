@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap);
 :root {
   --orange: #ffa500;
+  --orange_transparent: #ffa50090;
   --black: #333;
   --black_transparent: #333333bf;
   --white: #fefefe;
@@ -14,17 +15,21 @@
   text-decoration: none;
   text-transform: capitalize;
   font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
   &::selection {
     background: var(--orange);
     color: var(--white);
   }
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  
 }
 html {
   font-size: 62.5%;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-padding-top: 6rem;
-  scroll-behavior: smooth;
   &::-webkit-scrollbar {
     width: 0.5rem;
   }
@@ -40,6 +45,15 @@ body {
   max-width: 2960px;
   margin-left: auto;
   margin-right: auto;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  padding-top: 8rem;
   header {
     * {
       user-select: none;
@@ -47,7 +61,7 @@ body {
     }
   }
   main {
-    margin-top: 7rem;
+    min-height: 100vh;
     * {
       @extend header;
       user-select: text;
