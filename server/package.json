@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "API HUA shop - NodeJS",
   "main": "api/server.js",
-  "scripts": {
-    "start": "node api/server.js"
-  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "fs": "^0.0.1-security",

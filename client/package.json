@@ -12,8 +12,7 @@
     "sass": "^1.62.1"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"cd .. && cd server && npm start\"",
-    "push": "node script/push.js"
+    "start": "react-scripts start"
   },
   "browserslist": {
     "production": [
@@ -26,8 +25,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "yargs": "^17.7.2"
   }
 }
