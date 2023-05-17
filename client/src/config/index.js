@@ -19,8 +19,8 @@ const ENDPOINTS = {
       ADMINS: `${API_URL}/admins/create`,
     },
     AUTH: {
-      LOGIN: `${API_URL}/login`,
-      REGISTER: `${API_URL}/register`,
+      LOGIN: `${API_URL}/auth/login`,
+      REGISTER: `${API_URL}/auth/register`,
     },
   },
 };

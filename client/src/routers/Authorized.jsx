@@ -25,10 +25,14 @@ export default function Authorized() {
         } else {
           navigate(`${auth.root}/${auth.login}`);
         }
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
       });
     } else {
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
     }
   }, [userId, url, navigate, profile, auth]);
   if (loading) {
