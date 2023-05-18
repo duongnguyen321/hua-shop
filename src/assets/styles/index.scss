@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap);
+:root {
+  --orange: #ffa500;
+  --orange_transparent: #ffa50090;
+  --black: #333;
+  --black_transparent: #333333bf;
+  --white: #fefefe;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
+  &::selection {
+    background: var(--orange);
+    color: var(--white);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--black);
+  }
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-padding-top: 7rem;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+}
+
+body {
+  max-width: 2960px;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  // padding-top: 7rem;
+  * {
+    &::-webkit-scrollbar {
+      width: 0.3rem;
+    }
+  }
+  header {
+    * {
+      user-select: none;
+      transition: all 0.3s linear;
+    }
+  }
+  main {
+    min-height: 100vh;
+    * {
+      @extend header;
+      user-select: text;
+    }
+  }
+  footer {
+    @extend main;
+    margin-top: 0;
+  }
+}
+button,
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background: inherit;
+}

@@ -1,16 +1,33 @@
 {
-  "name": "huawei-shop",
-  "version": "1.0.0",
-  "description": "Xin chào! Đây là một dự án web bán hàng đơn giản, được phát triển bằng ReactJS và NodeJS. Mục đích của dự án này là giúp bạn có thể tạo ra một website bán hàng online của riêng mình, với các tính năng cơ bản như: quản lý sản phẩm, đặt hàng, thanh toán, quản lý đơn hàng, quản lý tài khoản người dùng, v.v.",
+  "name": "hua-shop",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.1",
+    "react-scripts": "5.0.1",
+    "sass": "^1.62.1"
+  },
   "scripts": {
-    "start": "concurrently \"cd client && npm start\" \"cd server && node api/server.js\"",
-    "install": "concurrently \"cd client && npm install\" \"cd server && npm install\"",
+    "start": "react-scripts start",
     "push": "node script/push.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
     "yargs": "^17.7.2"
-  },
-  "dependencies": {
-    "concurrently": "^8.0.1"
   }
 }
