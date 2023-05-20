@@ -13,9 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "push": "concurrently \"npm run push-git\" \"npm run push-vercel\"",
-    "push-git": "node script/push.js",
-    "push-vercel": "vercel --prod"
+    "push": "node script/push.js && vercel --prod"
   },
   "browserslist": {
     "production": [
