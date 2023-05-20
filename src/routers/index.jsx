@@ -12,8 +12,8 @@ import Cart from "../pages/Cart";
 import Checkout from "../pages/Checkout";
 import Error404 from "../pages/Error";
 import endpoint from "../config/endpoint";
-import Authorized from "./Authorized";
 import ProductsType from "../pages/Products/Type";
+import Authorized from "./Authorized";
 
 export default function Routers() {
   const { home, products, orders, cart, checkout, profile, auth, error } =

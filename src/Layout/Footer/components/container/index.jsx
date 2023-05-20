@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Box from "./component/Box";
 export default function Container({
   box_container,

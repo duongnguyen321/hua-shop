@@ -1,24 +1,28 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Links from "../../../helper/Link";
 
 export default function Navbar({ navbar, navlink, home, products }) {
   return (
     <nav className={navbar}>
-      <NavLink to={home} className={navlink}>
-        Trang Chủ
-      </NavLink>
-      <NavLink to={products.root} className={navlink}>
-        Sản Phẩm
-      </NavLink>
-      <NavLink to={`${products.root}/type/${products.new}`} className={navlink}>
-        Sản Phẩm Mới
-      </NavLink>
-      <NavLink
-        to={`${products.root}/type/${products.used}`}
+      <Links path={home} type="nav" title="Trang Chủ" className={navlink} />
+      <Links
+        path={products.root}
+        type="nav"
+        title="Sản Phẩm"
         className={navlink}
-      >
-        Sản Phẩm Cũ
-      </NavLink>
+      />
+      <Links
+        path={`${products.root}/type/${products.new}`}
+        type="nav"
+        title="Sản Phẩm Mới"
+        className={navlink}
+      />
+      <Links
+        path={`${products.root}/type/${products.used}`}
+        type="nav"
+        title="Sản Phẩm Cũ"
+        className={navlink}
+      />
     </nav>
   );
 }

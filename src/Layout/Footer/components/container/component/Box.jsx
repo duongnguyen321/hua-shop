@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import Links from "../../../../../helper/Link";
 export default function Box({
   title,
   text,
@@ -13,9 +12,9 @@ export default function Box({
   return (
     <div className={className}>
       {title === "HUAShop" ? (
-        <Link to={"/"} className={classNameTitle}>
+        <Links path={"/"} className={classNameTitle}>
           <h3 className={classNameTitle}>{title}</h3>
-        </Link>
+        </Links>
       ) : (
         <h3 className={classNameTitle}>{title}</h3>
       )}
@@ -33,9 +32,9 @@ export default function Box({
                 {label}
               </a>
             ) : (
-              <Link to={to} className={classNameLink}>
+              <Links path={to} className={classNameLink}>
                 {label}
-              </Link>
+              </Links>
             )}
           </React.Fragment>
         ))}

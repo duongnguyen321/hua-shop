@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import API from "../config";
+import axios from "axios";
+import API from "../config/index";
 import endpoint from "../config/endpoint";
 import Profile from "../pages/Profile";
-import axios from "axios";
 import Loading from "../pages/Loading";
 import Login from "../pages/Auth/Login";
 
@@ -25,22 +25,14 @@ export default function Authorized() {
         } else {
           navigate(`${auth.root}/${auth.login}`);
         }
-        setTimeout(() => {
-          setLoading(false);
-        }, 2000);
+        setLoading(false);
       });
     } else {
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
+      setLoading(false);
     }
   }, [userId, url, navigate, profile, auth]);
   if (loading) {
-    return (
-      <>
-        <Loading />
-      </>
-    );
+    return <Loading />;
   } else if (authorized) {
     return <Profile />;
   } else {

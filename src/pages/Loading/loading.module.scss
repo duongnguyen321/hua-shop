@@ -8,16 +8,7 @@
   bottom: 0;
   width: 100%;
   min-height: 100vh;
-  .title {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--orange);
-    box-shadow: 0 0 10px 0 #ffa6007e;
-    padding: 1rem;
-    border-radius: 1rem;
-  }
+
   .container {
     position: absolute;
     top: 50%;

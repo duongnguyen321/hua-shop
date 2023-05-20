@@ -37,7 +37,6 @@ html {
     width: 0.5rem;
   }
 }
-
 body {
   max-width: 2960px;
   margin-left: auto;
@@ -50,7 +49,6 @@ body {
   align-content: center;
   align-items: stretch;
   gap: 1rem;
-  // padding-top: 7rem;
   * {
     &::-webkit-scrollbar {
       width: 0.3rem;

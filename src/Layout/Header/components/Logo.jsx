@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Links from "../../../helper/Link";
 
 export default function Logo({ home, logo, logo_highlight }) {
   return (
-    <Link to={home} className={logo}>
+    <Links path={home} type="link" className={logo}>
       <span className={logo_highlight}>Hua</span>
       Shop
-    </Link>
+    </Links>
   );
 }

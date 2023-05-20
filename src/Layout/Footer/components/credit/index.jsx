@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Links from "../../../../helper/Link";
 export default function Credit({ credit, home }) {
   return (
     <h1 className={credit}>
-      created by <Link to={home}>HUAShop</Link> | all rights reserved!
+      created by <Links path={home}>HUAShop</Links> | all rights reserved!
     </h1>
   );
 }
