@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "push": "node script/push.js"
+    "push": "concurrently \"node script/push.js\" \"vercel --prod\""
   },
   "browserslist": {
     "production": [
