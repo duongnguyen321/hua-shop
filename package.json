@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "push": "node script/push.js"
+    "push": "node script"
   },
   "browserslist": {
     "production": [
