@@ -7,7 +7,7 @@ const authorized = async () => {
   let author = false;
   if (userId) {
     await axios.get(url).then((res) => {
-      if (res.data) {
+      if (Object.keys(res.data).length) {
         author = true;
       } else {
         author = false;
@@ -18,7 +18,6 @@ const authorized = async () => {
     author = false;
     localStorage.removeItem("user_id");
   }
-  console.log(author);
   return author;
 };
 export default authorized;
