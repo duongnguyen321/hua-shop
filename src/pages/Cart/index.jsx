@@ -1,7 +1,5 @@
-import React from 'react'
-
+import React from "react";
+import Loading from "../Loading";
 export default function Cart() {
-  return (
-    <div>Cart</div>
-  )
+  return <Loading />;
 }

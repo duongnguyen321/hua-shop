@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import Loading from "../../Loading";
 
 export default function Admin() {
-  return (
-    <div>Admin</div>
-  )
+  return <Loading />;
 }

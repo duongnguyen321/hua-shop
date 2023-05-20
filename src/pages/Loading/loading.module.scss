@@ -24,8 +24,9 @@
       width: 35px;
       height: 15px;
       border-radius: 8px;
-      background: var(--orange);
-      box-shadow: 0 0 10px 0 #ffa6007e;
+      background: url("../../assets/images/background.jpg") center/cover
+        no-repeat fixed;
+      box-shadow: 0 0 10px 0 #ffa600dd;
       &.uno {
         margin-right: -18px;
         transform-origin: center left;

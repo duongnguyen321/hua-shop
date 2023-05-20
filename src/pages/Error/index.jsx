@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import Loading from "../Loading";
 
 export default function Error404() {
-  return (
-    <div>Error404</div>
-  )
+  return <Loading />;
 }

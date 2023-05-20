@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import Loading from "../../Loading";
 
 export default function Product() {
-  return (
-    <div>Product</div>
-  )
+  return <Loading />;
 }

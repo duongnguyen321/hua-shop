@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import Loading from "../Loading";
 
 export default function Orders() {
-  return (
-    <div>Orders</div>
-  )
+  return <Loading />;
 }

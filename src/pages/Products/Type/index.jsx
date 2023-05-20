@@ -1,5 +1,6 @@
 import React from "react";
+import Loading from "../../Loading";
 
 export default function ProductsType() {
-  return <div>ProductsType</div>;
+  return <Loading />;
 }

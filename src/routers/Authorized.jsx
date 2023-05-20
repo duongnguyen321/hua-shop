@@ -1,39 +1,31 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import API from "../config/index";
 import endpoint from "../config/endpoint";
 import Profile from "../pages/Profile";
 import Loading from "../pages/Loading";
 import Login from "../pages/Auth/Login";
-
+import authorized from "../helper/authorized.js";
 export default function Authorized() {
   const { auth, profile } = endpoint;
-  const [authorized, setAuthorized] = useState(false);
+  const [author, setAuthor] = useState(false);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-
-  const userId = useMemo(() => localStorage.getItem("user_id"), []);
-  const url = useMemo(() => API.userId(userId), [userId]);
-
-  useEffect(() => {
-    if (userId) {
-      axios.get(url).then((res) => {
-        if (res.data) {
-          setAuthorized(true);
-          navigate(profile);
-        } else {
-          navigate(`${auth.root}/${auth.login}`);
-        }
-        setLoading(false);
-      });
+  const checkAuth = async () => {
+    if (await authorized()) {
+      setAuthor(true);
+      navigate(profile);
     } else {
-      setLoading(false);
+      setAuthor(false);
+      navigate(`${auth.root}/${auth.login}`);
     }
-  }, [userId, url, navigate, profile, auth]);
+    setLoading(false);
+  };
+  useEffect(() => {
+    checkAuth();
+  }, []);
   if (loading) {
     return <Loading />;
-  } else if (authorized) {
+  } else if (author) {
     return <Profile />;
   } else {
     return <Login />;

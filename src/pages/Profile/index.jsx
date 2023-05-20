@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import Loading from "../Loading";
 
 export default function Profile() {
-  return (
-    <div>Profile</div>
-  )
+  return <Loading />;
 }
