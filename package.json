@@ -28,6 +28,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^8.0.1",
     "yargs": "^17.7.2"
   }
 }
