@@ -11,12 +11,12 @@ import videos from "../../assets/videos";
 import VideoButton from "./components/VideoButton";
 import VideoPlayer from "./components/VideoPlayer";
 import homeStyle from "./assets/styles/home.module.scss";
+import SectionProducts from "./sections/Products";
 
 export default function Home() {
   const vidBtnRefs = useRef([]);
   const videoRef = useRef(null);
   const [activeBtnIndex, setActiveBtnIndex] = useState(0);
-
   const {
     home,
     background,
@@ -73,7 +73,7 @@ export default function Home() {
     <>
       <Section className={home}>
         <div className={content}>
-          <h3 className={title}>Mua và bán đồ điện tử Huawei</h3>
+          <h1 className={title}>Mua và bán đồ điện tử Huawei</h1>
           <p className={subtitle}>
             Chọn lựa sản phẩm mới nhất và đồ cũ với giá ưu đãi
           </p>
@@ -88,8 +88,8 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="home">
-        <h1 className="title">Hello world!</h1>
+      <Section className="products">
+        <SectionProducts />
       </Section>
     </>
   );

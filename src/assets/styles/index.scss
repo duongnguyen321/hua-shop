@@ -61,6 +61,7 @@ body {
     }
   }
   main {
+    max-width: 1200px;
     min-height: 100vh;
     * {
       @extend header;
@@ -79,4 +80,27 @@ textarea {
   outline: none;
   border: none;
   background: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--orange);
+  text-shadow: 0 0 0.5rem var(--black_transparent);
+  font-size: 2rem;
+}
+p,
+span {
+  font-weight: 400;
+  color: var(--white);
+  text-shadow: 0 0 0.5rem var(--black_transparent);
+  font-size: 1.6rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

@@ -1,4 +1,4 @@
-const API_URL = "https://api-hua.herokuapp.com";
+const API_URL = "https://dmkxc4-3001.csb.app";
 const ENDPOINTS = {
   USER_ID: (user_id) => `${API_URL}/users/${user_id}`,
   GET: {
@@ -12,6 +12,7 @@ const ENDPOINTS = {
       USER_ID: (user_id) => `${API_URL}/orders?user_id=${user_id}`,
       ORDER_ID: (order_id) => `${API_URL}/orders?order_id=${order_id}`,
     },
+    IMAGES: (url) => `${API_URL}${url}`,
   },
   POST: {
     CREATE: {
@@ -31,6 +32,7 @@ const API = {
   getOrdersAll: ENDPOINTS.GET.ORDERS.ALL,
   getOrdersUserId: ENDPOINTS.GET.ORDERS.USER_ID,
   getOrdersOrderId: ENDPOINTS.GET.ORDERS.ORDER_ID,
+  getImages: ENDPOINTS.GET.IMAGES,
   postCreateOrder: ENDPOINTS.POST.CREATE.ORDER,
   postCreateAdmin: ENDPOINTS.POST.CREATE.ADMINS,
   postLogin: ENDPOINTS.POST.AUTH.LOGIN,
