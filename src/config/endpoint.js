@@ -16,6 +16,7 @@ const endpoint = {
     root: "/auth",
     login: "login",
     register: "register",
+    tokenLogin: "auth-token",
     admin: {
       root: "admin",
       create: "create",

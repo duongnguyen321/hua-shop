@@ -11,7 +11,8 @@ export default function Authorized() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const checkAuth = async () => {
-    if (await authorized()) {
+    const isAuth = await authorized();
+    if (isAuth) {
       setAuthor(true);
       navigate(profile);
     } else {
