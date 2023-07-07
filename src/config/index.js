@@ -1,4 +1,4 @@
-const API_URL = "https://7t55x3-3001.csb.app";
+const API_URL = "https://kmlqxg-3001.csb.app";
 const ENDPOINTS = {
   GET: {
     PRODUCTS: {

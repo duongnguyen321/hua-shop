@@ -12,7 +12,6 @@ export default function SectionProducts() {
   const getProducts = async () => {
     const res = await axios.get(getProductsAll);
     const data = res.data;
-    console.log(data);
     setProducts(data);
   };
 
