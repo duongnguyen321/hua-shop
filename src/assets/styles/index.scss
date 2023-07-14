@@ -39,16 +39,8 @@ html {
 }
 body {
   max-width: 2960px;
-  margin-left: auto;
-  margin-right: auto;
   background: var(--black);
   color: var(--white);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: stretch;
-  gap: 1rem;
   * {
     &::-webkit-scrollbar {
       width: 0.3rem;
@@ -63,7 +55,7 @@ body {
   main {
     max-width: 1440px;
     min-height: 100vh;
-    padding-right: 0.3rem;
+    margin: 0 auto;
     * {
       @extend header;
       user-select: text;
