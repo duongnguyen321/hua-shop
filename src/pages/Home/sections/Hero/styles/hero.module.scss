@@ -2,13 +2,14 @@
   &__content {
     text-align: center;
     &--title {
-      font-size: 4rem;
+      font-size: calc(4rem + 0.4vw);
+
       color: var(--orange);
       text-transform: uppercase;
       text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
     }
     &--subtitle {
-      font-size: 2.5rem;
+      font-size: calc(2.5rem + 0.25vw);
       color: #fefefe;
       padding: 0.5rem 0;
     }

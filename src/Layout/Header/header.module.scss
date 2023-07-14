@@ -12,9 +12,8 @@
   align-items: center;
   align-content: center;
   backdrop-filter: blur(2px);
-  
   &__logo {
-    font-size: 2.5rem;
+    font-size: calc(2.5rem + .25vw);
     font-weight: bolder;
     color: var(--white);
     &--highlight {
@@ -27,7 +26,7 @@
   &__navbar {
     &--navlink {
       color: var(--white);
-      font-size: 2rem;
+        font-size: calc(2rem + 0.2vw);
       margin: 0 0.8rem;
     }
     :hover {
@@ -41,7 +40,8 @@
     align-items: center;
     gap: 2rem;
     &--icon {
-      font-size: 2.5rem;
+        font-size: calc(2.5rem + 0.25vw);
+
       color: var(--orange);
       cursor: pointer;
     }

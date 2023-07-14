@@ -89,14 +89,14 @@ h6 {
   font-weight: 600;
   color: var(--orange);
   text-shadow: 0 0 0.5rem var(--black_transparent);
-  font-size: 2rem;
+  font-size: calc(2rem + 0.2vw);
 }
 p,
 span {
   font-weight: 400;
   color: var(--white);
   text-shadow: 0 0 0.5rem var(--black_transparent);
-  font-size: 1.6rem;
+  font-size: calc(1.6rem + 0.16vw);
 }
 img {
   max-width: 100%;
