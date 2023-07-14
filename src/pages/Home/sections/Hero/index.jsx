@@ -27,7 +27,6 @@ export default function SectionHero() {
     "home__controls__vid-btn--active": active,
     "home__background--video": video,
   } = heroStyles;
-  console.log("active", active);
   useLayoutEffect(() => {
     const savedActiveBtnIndex = localStorage.getItem("activeBtnIndex");
     if (savedActiveBtnIndex !== null) {

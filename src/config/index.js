@@ -30,7 +30,6 @@ const ENDPOINTS = {
     },
   },
 };
-// console.log(ENDPOINTS);
 
 const API = {
   getUserId: ENDPOINTS.GET.USERID,
