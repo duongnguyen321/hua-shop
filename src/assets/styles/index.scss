@@ -6,6 +6,11 @@
   --black_transparent: #333333bf;
   --white: #fefefe;
   --max_width: 1440px;
+  --font-size-14: calc(1.3rem + 0.13vw);
+  --font-size-16: calc(1.4rem + 0.14vw);
+  --font-size-18: calc(1.6rem + 0.16vw);
+  --font-size-22:  calc(2rem + 0.2vw);
+  --supper-title:  calc(3.4rem + 0.34vw)
 }
 * {
   margin: 0;
@@ -89,14 +94,14 @@ h6 {
   font-weight: 600;
   color: var(--orange);
   text-shadow: 0 0 0.5rem var(--black_transparent);
-  font-size: calc(2rem + 0.2vw);
+  font-size: var(--font-size-22);
 }
 p,
 span {
   font-weight: 400;
   color: var(--white);
   text-shadow: 0 0 0.5rem var(--black_transparent);
-  font-size: calc(1.6rem + 0.16vw);
+  font-size: var(--font-size-16);
 }
 img {
   max-width: 100%;

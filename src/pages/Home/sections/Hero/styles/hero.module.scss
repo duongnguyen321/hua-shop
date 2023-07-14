@@ -2,14 +2,14 @@
   &__content {
     text-align: center;
     &--title {
-      font-size: calc(3.6rem + 0.36vw);
+      font-size: var(--supper-title);
 
       color: var(--orange);
       text-transform: uppercase;
       text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
     }
     &--subtitle {
-      font-size: calc(2.5rem + 0.25vw);
+      font-size: var(--font-size-18);
       color: #fefefe;
       padding: 0.5rem 0;
     }

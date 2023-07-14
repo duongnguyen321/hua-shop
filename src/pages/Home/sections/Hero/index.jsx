@@ -22,11 +22,12 @@ export default function SectionHero() {
     home__content: content,
     home__controls: controls,
     "home__content--title": title,
-    "home__content--subtile": subtitle,
+    "home__content--subtitle": subtitle,
     "home__controls--vid-btn": vid_btn,
     "home__controls__vid-btn--active": active,
     "home__background--video": video,
   } = heroStyles;
+  console.log("heroStyles", heroStyles);
   useLayoutEffect(() => {
     const savedActiveBtnIndex = localStorage.getItem("activeBtnIndex");
     if (savedActiveBtnIndex !== null) {
