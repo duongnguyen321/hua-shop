@@ -6,21 +6,21 @@
   justify-content: center;
   flex-flow: column;
   z-index: 0;
-  .content {
+  &__content {
     text-align: center;
-    .title {
+    &--title {
       font-size: 4rem;
       color: var(--orange);
       text-transform: uppercase;
       text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
     }
-    .subtitle {
+    &--subtitle {
       font-size: 2.5rem;
       color: #fefefe;
       padding: 0.5rem 0;
     }
   }
-  .controls {
+  &__controls {
     display: flex;
     padding: 1rem;
     border-radius: 5rem;
@@ -28,7 +28,7 @@
     position: relative;
     top: 5rem;
     align-items: center;
-    .vid_btn {
+    &--vid-btn {
       height: 2rem;
       width: 2rem;
       display: inline-block;
@@ -36,12 +36,21 @@
       background: #888;
       cursor: pointer;
       margin: 0 0.5rem;
-      &.active {
+    }
+    &__vid-btn {
+      &--active {
         background: var(--orange);
       }
     }
   }
-  .background {
+  .controls {
+    &__vid-btn {
+      &--active {
+        background: var(--orange);
+      }
+    }
+  }
+  &__background {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,10 +61,10 @@
     background: url("../../../../assets/images/background.jpg") center/cover
       no-repeat fixed;
     filter: brightness(0.6);
-    border-radius: 1rem;
     z-index: -1;
+    border-radius: 0.5rem;
     overflow: hidden;
-    .video {
+    &--video {
       position: absolute;
       top: 0;
       left: 0;

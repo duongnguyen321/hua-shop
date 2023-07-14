@@ -2,30 +2,36 @@ import API from "../config";
 import axios from "axios";
 
 const authorized = async () => {
-  const userId = localStorage.getItem("userId");
+  const userId = localStorage.getItem("userid");
   const accessToken = localStorage.getItem("accessToken");
-  const url = API.getUserId(userId);
+  const url = API.postTokenLogin;
   let author = false;
   if (userId && accessToken) {
     const res = await axios
-      .get(url, {
-        headers: { Authorization: `Bearer ${accessToken}` },
+      .post(url, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+          userid: userId,
+        },
       })
-      .then((res) => res)
-      .catch((err) => err.response);
-    if (res.status !== 401) {
-      author = true;
-    } else {
-      author = false;
-      localStorage.removeItem("userId");
-      localStorage.removeItem("accessToken");
+      .then((res) => res.data)
+      .catch((err) => err.response.data);
+    if (res) {
+      if (res?.user?.userid === userId) {
+        author = true;
+        localStorage.userInfo = JSON.stringify(res.user);
+      } else {
+        author = false;
+        localStorage.removeItem("userid");
+        localStorage.removeItem("userInfo");
+        localStorage.removeItem("accessToken");
+        localStorage.removeItem("refreshToken");
+      }
     }
   } else {
     author = false;
-    localStorage.removeItem("userId");
-    localStorage.removeItem("accessToken");
   }
-
   return author;
 };
 export default authorized;

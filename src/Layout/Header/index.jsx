@@ -5,8 +5,15 @@ import Logo from "./components/Logo";
 import Navbar from "./components/Navbar";
 import Icons from "./components/Icons";
 export default function Header() {
-  const { header, logo, logo_highlight, navbar, navlink, icons, icon } =
-    headerStyles;
+  const {
+    header,
+    header__logo: logo,
+    header__navbar: navbar,
+    header__icons: icons,
+    "header__logo--highlight": logo_highlight,
+    "header__navbar--navlink": navlink,
+    "header__icons--icon": icon,
+  } = headerStyles;
   const { home, products, cart, profile } = endpoint;
   return (
     <header className={header}>

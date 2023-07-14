@@ -14,6 +14,8 @@ import Error404 from "../pages/Error";
 import endpoint from "../config/endpoint";
 import ProductsType from "../pages/Products/Type";
 import Authorized from "./Authorized";
+import Profile from "../pages/Profile";
+import Login from "../pages/Auth/Login";
 
 export default function Routers() {
   const { home, products, orders, cart, checkout, profile, auth, error } =
@@ -28,18 +30,51 @@ export default function Routers() {
         <Route path={":id"} element={<Product />} />
       </Route>
       <Route path={orders.root}>
-        <Route path="" element={<Orders />} />
-        <Route path={orders.create} element={<CreateOrder />} />
+        <Route
+          path=""
+          element={<Authorized Component={<Orders />} Redirect={<Login />} />}
+        />
+        <Route
+          path={orders.create}
+          element={
+            <Authorized Component={<CreateOrder />} Redirect={<Login />} />
+          }
+        />
       </Route>
-      <Route path={cart} element={<Cart />} />
-      <Route path={checkout} element={<Checkout />} />
-      <Route path={profile} element={<Authorized />} />
+      <Route
+        path={cart}
+        element={<Authorized Component={<Cart />} Redirect={<Login />} />}
+      />
+      <Route
+        path={checkout}
+        element={<Authorized Component={<Checkout />} Redirect={<Login />} />}
+      />
+      <Route
+        path={profile}
+        element={<Authorized Component={<Profile />} Redirect={<Login />} />}
+      />
       <Route path={auth.root}>
-        <Route path={auth.login} element={<Authorized />} />
-        <Route path={auth.register} element={<Register />} />
+        <Route
+          path={auth.login}
+          element={<Authorized Component={<Profile />} Redirect={<Login />} />}
+        />
+        <Route
+          path={auth.register}
+          element={
+            <Authorized Component={<Profile />} Redirect={<Register />} />
+          }
+        />
         <Route path={auth.admin.root}>
-          <Route path="" element={<Admin />} />
-          <Route path={auth.admin.create} element={<CreateAdmin />} />
+          <Route
+            path=""
+            element={<Authorized Component={<Admin />} Redirect={<Login />} />}
+          />
+          <Route
+            path={auth.admin.create}
+            element={
+              <Authorized Component={<CreateAdmin />} Redirect={<Login />} />
+            }
+          />
         </Route>
       </Route>
       <Route path={error} element={<Error404 />} />

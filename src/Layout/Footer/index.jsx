@@ -5,18 +5,25 @@ import Container from "./components/container";
 import Credit from "./components/credit";
 export default function Footer() {
   const { home, products, cart, profile } = endpoint;
-  const { footer, box_container, box, title, text, link, credit } =
-    footerStyles;
+  const {
+    footer,
+    "footer__box-container": box_container,
+    "footer__box-container--box": box,
+    "box-container__box--title": title,
+    "box-container__box--text": text,
+    "box-container__box--link": link,
+    footer__credit: credit,
+  } = footerStyles;
   const containerProps = {
-    box_container: box_container,
-    box: box,
-    title: title,
-    text: text,
-    link: link,
-    home: home,
-    products: products,
-    cart: cart,
-    profile: profile,
+    box_container,
+    box,
+    title,
+    text,
+    link,
+    home,
+    products,
+    cart,
+    profile,
   };
   return (
     <footer className={footer}>

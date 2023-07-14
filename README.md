@@ -49,14 +49,14 @@ The purpose of this project is to help you create your own online store website 
 - **GET /products/type/:type** - Get products by type
 - **GET /products/:id** - Get product by ID
 - **GET /orders** - Get all orders
-- **GET /orders?user_id=:user_id** - Filter orders by user ID
-- **GET /orders?order_id=:order_id** - Filter orders by order ID
-- **GET /users/:user_id** - Get user information by ID
+- **GET /orders?userid=:userid** - Filter orders by user ID
+- **GET /orders?orderid=:orderid** - Filter orders by order ID
+- **GET /users/:userid** - Get user information by ID
 - **POST /orders/create** - Create a new order
 - **POST /admins/create** - Create a new admin user
 - **POST /login** - Authenticate user
 - **POST /register** - Register a new user
-- **PATCH /users/:user_id** - Update user information by ID
+- **PATCH /users/:userid** - Update user information by ID
 
 ## Author
 
@@ -90,7 +90,7 @@ Mục đích của dự án này là giúp bạn có thể tạo ra một websit
 
 - Lấy sản phẩm theo loại và khoảng giá
 - Lấy sản phẩm bằng ID
-- Lấy tất cả đơn hàng hoặc lọc đơn hàng theo user_id hoặc order_id
+- Lấy tất cả đơn hàng hoặc lọc đơn hàng theo userid hoặc orderid
 - Tạo đơn hàng mới
 - Lấy thông tin người dùng bằng ID
 - Cập nhật thông tin người dùng
@@ -113,14 +113,14 @@ Mục đích của dự án này là giúp bạn có thể tạo ra một websit
 - **GET /products/type/:type** - Lấy sản phẩm theo loại
 - **GET /products/:id** - Lấy sản phẩm theo id
 - **GET /orders** - Lấy tất cả đơn hàng
-- **GET /orders?user_id=:user_id** - Lọc đơn hàng theo user_id
-- **GET /orders?order_id=:order_id** - Lọc đơn hàng theo order_id
-- **GET /users/:user_id** - Lấy thông tin người dùng bằng ID
+- **GET /orders?userid=:userid** - Lọc đơn hàng theo userid
+- **GET /orders?orderid=:orderid** - Lọc đơn hàng theo orderid
+- **GET /users/:userid** - Lấy thông tin người dùng bằng ID
 - **POST /orders/create** - Tạo đơn hàng mới
 - **POST /admins/create** - Tạo người dùng quản trị mới
 - **POST /login** - Đăng nhập
 - **POST /register** - Đăng ký
-- **PATCH /users/:user_id** - Sửa thông tin người dùng bằng ID
+- **PATCH /users/:userid** - Sửa thông tin người dùng bằng ID
 
 ## Tác giả
 

@@ -3,7 +3,7 @@ import Links from "../../../helper/Link";
 
 export default function Logo({ home, logo, logo_highlight }) {
   return (
-    <Links path={home} type="link" className={logo}>
+    <Links to={home} type="link" className={logo}>
       <span className={logo_highlight}>Hua</span>
       Shop
     </Links>

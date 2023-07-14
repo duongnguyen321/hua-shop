@@ -12,11 +12,11 @@ export default function Box({
   return (
     <div className={className}>
       {title === "HUAShop" ? (
-        <Links path={"/"} className={classNameTitle}>
-          <h3 className={classNameTitle}>{title}</h3>
+        <Links to={"/"} className={classNameTitle}>
+          <p className={classNameTitle}>{title}</p>
         </Links>
       ) : (
-        <h3 className={classNameTitle}>{title}</h3>
+        <p className={classNameTitle}>{title}</p>
       )}
       {text && <p className={classNameText}>{text}</p>}
       {links &&
@@ -32,7 +32,7 @@ export default function Box({
                 {label}
               </a>
             ) : (
-              <Links path={to} className={classNameLink}>
+              <Links to={to} className={classNameLink}>
                 {label}
               </Links>
             )}

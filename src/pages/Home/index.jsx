@@ -1,5 +1,6 @@
 import React, {
   useEffect,
+  useLayoutEffect,
   useRef,
   useState,
   useCallback,
@@ -19,17 +20,16 @@ export default function Home() {
   const [activeBtnIndex, setActiveBtnIndex] = useState(0);
   const {
     home,
-    background,
-    content,
-    title,
-    subtitle,
-    controls,
-    vid_btn,
-    active,
-    video,
+    home__background: background,
+    home__content: content,
+    home__controls: controls,
+    "home__content--title": title,
+    "home__content--subtile": subtitle,
+    "home__controls--vid-btn": vid_btn,
+    "controls__vid-btn--active": active,
+    "home__background--video": video,
   } = homeStyle;
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     const savedActiveBtnIndex = localStorage.getItem("activeBtnIndex");
     if (savedActiveBtnIndex !== null) {
       const activeBtnIndex = parseInt(savedActiveBtnIndex);
