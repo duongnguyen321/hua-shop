@@ -67,6 +67,9 @@ body {
     @extend main;
     min-height: auto;
     margin-top: 0;
+    * {
+      user-select: none;
+    }
   }
 }
 button,
