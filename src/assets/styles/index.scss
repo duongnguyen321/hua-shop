@@ -5,6 +5,7 @@
   --black: #333;
   --black_transparent: #333333bf;
   --white: #fefefe;
+  --max_width: 1440px;
 }
 * {
   margin: 0;
@@ -47,17 +48,18 @@ body {
     }
   }
   header {
+    padding: 2rem calc((100vw - var(--max_width)) / 2);
     * {
       user-select: none;
-      transition: all 0.3s linear;
+      transition: all 0.3s ease-in-out;
     }
   }
   main {
-    max-width: 1440px;
+    @extend header;
     min-height: 100vh;
     margin: 0 auto;
     * {
-      @extend header;
+      padding: 0;
       user-select: text;
     }
   }

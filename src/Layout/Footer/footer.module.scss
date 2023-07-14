@@ -1,11 +1,12 @@
 .footer {
   max-width: 100%;
   width: 100%;
-  padding: 2rem 9%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  background: var(--black_transparent);
+  backdrop-filter: blur(2px);
   gap: 1rem;
   &__box-container {
     width: 100%;

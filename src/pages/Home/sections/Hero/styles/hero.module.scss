@@ -50,6 +50,7 @@
     z-index: -1;
     border-radius: 0.5rem;
     overflow: hidden;
+    transition-timing-function: linear;
     &--video {
       position: absolute;
       top: 0;
