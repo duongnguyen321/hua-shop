@@ -1,23 +1,23 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useCallback, useLayoutEffect, useMemo, useState } from "react";
 import axios from "axios";
 import configs from "../../../../config";
 import productsStyles from "./styles/products.module.scss";
 
 export default function SectionProducts() {
   const [products, setProducts] = useState([]);
-  const { getProductsAll, getImages } = configs;
+  const { getProductsAll, getImages } = useMemo(() => configs, []);
   const { img } = productsStyles;
 
-  const getProducts = async () => {
-    const res = await axios.get(getProductsAll);
-    const { data } = await res.data;
-    setProducts(data);
-  };
   useLayoutEffect(() => {
     getProducts();
   }, []);
 
-  // return <div>hello</div>;
+  const getProducts = useCallback(async () => {
+    const res = await axios.get(getProductsAll);
+    const { data } = await res.data;
+    setProducts(data);
+  }, [getProductsAll]);
+
   return (
     <>
       <h2 className="title">Các sản phẩm nổi bật.</h2>
@@ -37,20 +37,12 @@ export default function SectionProducts() {
               </div>
               <div className="product__info">
                 <h3 className="product__name">{product.name}</h3>
-                <div className="product__price">
-                  <span className="product__price--old">
-                    {product.price.toLocaleString("vi-VN", {
-                      style: "currency",
-                      currency: "VND",
-                    })}
-                  </span>
-                  <span className="product__price--new">
-                    {product.price.toLocaleString("vi-VN", {
-                      style: "currency",
-                      currency: "VND",
-                    })}
-                  </span>
-                </div>
+                <span className="product__price">
+                  {(+product.price * 23500).toLocaleString("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                  })}
+                </span>
                 <div className="product__rating">
                   <span className="product__rating--count">
                     {product.ratings.length} đánh giá

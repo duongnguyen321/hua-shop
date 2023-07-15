@@ -11,17 +11,18 @@ function Page() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
 
-  const fakeLoading = useCallback(() => {
+  const fakeLoading = useCallback(async () => {
     setIsLoading(true);
-    setTimeout(() => {
+    await setTimeout(() => {
       setIsLoading(false);
-    }, 1200);
+    }, 800);
     handleScrollToTop();
   }, []);
 
   useEffect(() => {
     fakeLoading();
-  }, [location.pathname, fakeLoading]);
+    handleScrollToTop();
+  }, [location.pathname]);
 
   const content = useMemo(() => {
     return isLoading ? <Loading /> : <Main />;

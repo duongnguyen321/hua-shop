@@ -4,14 +4,19 @@ export default function Icons({ icons, icon, cart, profile }) {
   const [theme, setTheme] = useState("dark");
   const handleChangeTheme = useCallback(() => {
     setTheme((theme) => (theme === "dark" ? "light" : "dark"));
-    localStorage.theme = theme;
-    document.querySelector("body").className = theme;
+    localStorage.theme = theme === "dark" ? "light" : "dark";
+    document.querySelector("body").className =
+      theme === "dark" ? "light" : "dark";
   }, [theme]);
   useLayoutEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
       document.querySelector("body").className = savedTheme;
+    } else {
+      setTheme("dark");
+      document.querySelector("body").className = "dark";
+      localStorage.theme = "dark";
     }
   }, []);
   return (

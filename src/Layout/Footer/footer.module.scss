@@ -20,9 +20,15 @@
       height: 100%;
       padding: 1rem 0;
       flex: 1 1 25rem;
-      overflow-x: hidden;
-      overflow-y: auto;
+      overflow: hidden auto;
       position: relative;
+      &::-webkit-scrollbar-thumb {
+        background: var(--orange);
+        border-radius: 5rem;
+      }
+      &::-webkit-scrollbar-track {
+        background: var(--background-transparent);
+      }
     }
   }
   .box-container {
