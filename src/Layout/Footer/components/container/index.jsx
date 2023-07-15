@@ -34,19 +34,7 @@ export default function Container({
           to: home,
         },
         {
-          label: "Ấn Độ",
-          to: home,
-        },
-        {
           label: "Mỹ",
-          to: home,
-        },
-        {
-          label: "Nhật Bản",
-          to: home,
-        },
-        {
-          label: "Pháp",
           to: home,
         },
       ],
@@ -108,21 +96,6 @@ export default function Container({
         {
           label: "Youtube",
           to: "https://youtube.com",
-          external: true,
-        },
-        {
-          label: "Tiktok",
-          to: "https://tiktok.com",
-          external: true,
-        },
-        {
-          label: "Zalo",
-          to: "https://zalo.me",
-          external: true,
-        },
-        {
-          label: "Pinterest",
-          to: "https://pinterest.com",
           external: true,
         },
       ],
