@@ -17,6 +17,7 @@ export default function SectionHero() {
   const backgroundRef = useRef(null);
   const [activeBtnIndex, setActiveBtnIndex] = useState(0);
   const [opacity, setOpacity] = useState(1);
+  const minOpacity = 0.1
   const {
     home__background: background,
     home__content: content,
@@ -52,9 +53,7 @@ export default function SectionHero() {
     const { scrollY } = window;
     const { offsetHeight } = backgroundRef.current;
     const opacity =
-      1 - (scrollY * 1.2) / offsetHeight >= 0
-        ? 1 - (scrollY * 1.2) / offsetHeight
-        : 0;
+      1 - scrollY / offsetHeight >= minOpacity ? 1 - scrollY / offsetHeight : minOpacity;
     setOpacity(opacity);
   }, []);
 
@@ -102,7 +101,7 @@ export default function SectionHero() {
         ref={backgroundRef}
         style={{
           opacity: opacity,
-          visibility: opacity === 0 && "hidden",
+          pointerEvents: opacity <= minOpacity && "none"
         }}
       >
         <VideoPlayer videoClass={video} videoRef={videoRef} />

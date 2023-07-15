@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import endpoint from "../config/endpoint";
-import Profile from "../pages/Profile";
 import Loading from "../pages/Loading";
-import Login from "../pages/Auth/Login";
 import authorized from "../helper/authorized.js";
 export default function Authorized({ Component, Redirect }) {
   const { auth, profile } = endpoint;
