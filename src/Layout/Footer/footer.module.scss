@@ -4,7 +4,7 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  background: var(--black_transparent);
+  background: var(--background-transparent);
   backdrop-filter: blur(2px);
   gap: 1rem;
   &__box-container {
@@ -37,7 +37,7 @@
         font-size: var(--font-size-14);
         padding: 0.7rem 0;
         text-decoration: none;
-        color: #eee;
+        color: var(--white);
         &:hover {
           color: var(--orange);
           box-shadow: 0 0.5rem 1rem var(--orange_transparent);
@@ -64,6 +64,7 @@
     font-weight: 400;
     text-align: center;
     border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
     a {
       color: var(--orange);
       font-weight: 600;
