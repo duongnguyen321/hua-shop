@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import headerStyles from "./header.module.scss";
 import endpoint from "../../config/endpoint";
 import Logo from "./components/Logo";
 import Navbar from "./components/Navbar";
 import Icons from "./components/Icons";
-export default function Header() {
+export default function Header({ main }) {
+  const ref = useRef(null);
+  const headerRef = useMemo(() => ref, []);
   const {
     header,
     header__logo: logo,
@@ -15,8 +17,32 @@ export default function Header() {
     "header__icons--icon": icon,
   } = headerStyles;
   const { home, products, cart, profile } = endpoint;
+  useEffect(() => {
+    const handleScroll = () => {
+      const handleWheel = (e) => {
+        if (headerRef.current) {
+          if (
+            window.scrollY + window.innerHeight >=
+            document.body.offsetHeight - 200
+          ) {
+            return (headerRef.current.style.transform = "translateY(0)");
+          } else if (e.wheelDeltaY < 0) {
+            return (headerRef.current.style.transform = "translateY(-100%)");
+          } else {
+            return (headerRef.current.style.transform = "translateY(0)");
+          }
+        }
+      };
+      main.current.addEventListener("wheel", handleWheel);
+      return () => {
+        main.current.removeEventListener("wheel", handleWheel);
+      };
+    };
+    handleScroll();
+  }, []);
+
   return (
-    <header className={header}>
+    <header className={header} ref={headerRef}>
       <Logo home={home} logo={logo} logo_highlight={logo_highlight} />
       <Navbar
         navbar={navbar}
