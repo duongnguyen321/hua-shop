@@ -18,7 +18,7 @@ export default function SectionHero() {
   const [activeBtnIndex, setActiveBtnIndex] = useState(0);
   const [opacity, setOpacity] = useState(1);
   const theme = useMemo(() => localStorage.getItem("theme"), []);
-  const minOpacity = theme === "dark" ? 0.1 : 0.2;
+  const minOpacity = 0.1;
   const {
     home__background: background,
     home__content: content,

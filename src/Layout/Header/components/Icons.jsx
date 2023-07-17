@@ -22,8 +22,13 @@ export default function Icons({ icons, icon, cart, profile }) {
   return (
     <div className={icons}>
       <i
-        className={`${icon} fa ${theme === "light" ? "fa-moon" : "fa-sun"}`}
+        className={`${icon} fa fa-moon`}
         onClick={handleChangeTheme}
+        style={{
+          color: `${
+            theme === "dark" ? "var(--orange_transparent)" : "var(--orange)"
+          }`,
+        }}
       ></i>
       <Links to={cart} className={icon}>
         <i className="fas fa-cart-shopping"></i>
