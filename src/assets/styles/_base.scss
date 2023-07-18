@@ -1,0 +1,58 @@
+* {
+  text-transform: capitalize;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  &::selection {
+    background: var(--orange);
+    color: var(--white);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--black);
+  }
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-padding-top: 7rem;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+}
+button,
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--orange);
+  text-shadow: var(--shadow);
+  font-size: var(--font-size-22);
+}
+p,
+span {
+  font-weight: 400;
+  color: var(--color);
+  text-shadow: var(--shadow);
+  font-size: var(--font-size-16);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

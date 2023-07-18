@@ -1,0 +1,21 @@
+:root {
+  --orange: #ffa500;
+  --orange_transparent: #ffa50090;
+  --black: #222222;
+  --black_transparent: #222222bf;
+  --white: #fefefe;
+  --background: var(--black);
+  --background-transparent: var(--black_transparent);
+  --shadow: 0 0 0.5rem var(--black_transparent);
+  --color: var(--white);
+  --transition-property: background, background-color, background-image, color,
+    border-radius, border, border-color, transform, opacity, width, height;
+  --max_width: 1440px;
+  --font-size-14: calc(1.3rem + 0.13vw);
+  --font-size-16: calc(1.4rem + 0.14vw);
+  --font-size-18: calc(1.6rem + 0.16vw);
+  --font-size-22: calc(2rem + 0.2vw);
+  --supper-title: calc(3.4rem + 0.34vw);
+  --shadow-bold: -0.2px -0.2px 0 var(--orange), 0.2px -0.2px 0 var(--orange),
+    -0.2px 0.2px 0 var(--orange), 0.2px 0.2px 0 var(--orange);
+}

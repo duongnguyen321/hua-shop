@@ -48,6 +48,7 @@
     }
     :hover {
       color: var(--orange);
+      text-shadow: var(--shadow-bold);
       &::before {
         width: 100%;
       }
@@ -62,6 +63,9 @@
       font-size: var(--font-size-22);
       color: var(--orange);
       cursor: pointer;
+      &.icon-dark {
+        color: var(--orange_transparent);
+      }
     }
   }
 }

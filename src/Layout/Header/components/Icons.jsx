@@ -1,6 +1,6 @@
 import React, { useCallback, useLayoutEffect, useState } from "react";
 import Links from "../../../helper/Link";
-export default function Icons({ icons, icon, cart, profile }) {
+export default function Icons({ icons, icon, cart, profile, icon_dark }) {
   const [theme, setTheme] = useState("dark");
   const handleChangeTheme = useCallback(() => {
     setTheme((theme) => (theme === "dark" ? "light" : "dark"));
@@ -22,13 +22,8 @@ export default function Icons({ icons, icon, cart, profile }) {
   return (
     <div className={icons}>
       <i
-        className={`${icon} fa fa-moon`}
+        className={`${icon} ${theme === "dark" && icon_dark} fa fa-moon`}
         onClick={handleChangeTheme}
-        style={{
-          color: `${
-            theme === "dark" ? "var(--orange_transparent)" : "var(--orange)"
-          }`,
-        }}
       ></i>
       <Links to={cart} className={icon}>
         <i className="fas fa-cart-shopping"></i>

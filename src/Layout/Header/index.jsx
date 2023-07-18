@@ -15,6 +15,7 @@ export default function Header({ main }) {
     "header__logo--highlight": logo_highlight,
     "header__navbar--navlink": navlink,
     "header__icons--icon": icon,
+    "icon-dark": icon_dark,
   } = headerStyles;
   const { home, products, cart, profile } = endpoint;
   useEffect(() => {
@@ -50,7 +51,13 @@ export default function Header({ main }) {
         home={home}
         products={products}
       />
-      <Icons icons={icons} icon={icon} cart={cart} profile={profile} />
+      <Icons
+        icons={icons}
+        icon={icon}
+        cart={cart}
+        profile={profile}
+        icon_dark={icon_dark}
+      />
     </header>
   );
 }
