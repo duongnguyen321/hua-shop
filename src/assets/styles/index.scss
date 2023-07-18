@@ -1,14 +1,12 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap);
 @import "root";
-@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap);
 @import "reset";
 @import "base";
 
 body {
-  max-width: 2960px;
   margin: 0 auto;
-  background: var(--background);
-  color: var(--color);
   overflow: hidden auto;
+  background: var(--background);
   transition-property: var(--transition-property);
   &.light {
     --background: var(--white);

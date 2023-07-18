@@ -1,20 +1,6 @@
 * {
-  text-transform: capitalize;
-  font-family: "Nunito", sans-serif;
-  scroll-behavior: smooth;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
-  &::selection {
-    background: var(--orange);
-    color: var(--white);
-  }
-  &::-webkit-scrollbar-thumb {
-    background: var(--orange);
-    border-radius: 5rem;
-  }
-  &::-webkit-scrollbar-track {
-    background: var(--black);
-  }
 }
 html {
   font-size: 62.5%;
@@ -23,6 +9,41 @@ html {
   scroll-padding-top: 7rem;
   &::-webkit-scrollbar {
     width: 0.5rem;
+  }
+}
+html,
+body,
+div {
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--black);
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li,
+button,
+input,
+textarea,
+select,
+option,
+optgroup {
+  font-family: "Nunito", sans-serif;
+  text-transform: capitalize;
+  &::selection {
+    background: var(--orange);
+    color: var(--white);
   }
 }
 button,
@@ -55,4 +76,5 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 0.75rem;
 }
