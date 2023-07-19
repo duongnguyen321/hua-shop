@@ -23,11 +23,11 @@ export default function SectionHero() {
     home__background: background,
     home__content: content,
     home__controls: controls,
-    "home__content--title": title,
-    "home__content--subtitle": subtitle,
-    "home__controls--vid-btn": vid_btn,
-    "home__controls__vid-btn--active": active,
-    "home__background--video": video,
+    home__content_title: title,
+    home__content_subtitle: subtitle,
+    "home__background-video": video,
+    "home__controls_vid-btn": vid_btn,
+    "home__controls_vid-btn--active": active,
   } = heroStyles;
   useLayoutEffect(() => {
     const savedActiveBtnIndex = localStorage.getItem("activeBtnIndex");

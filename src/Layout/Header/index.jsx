@@ -13,8 +13,9 @@ export default function Header({ main }) {
     header__navbar: navbar,
     header__icons: icons,
     "header__logo--highlight": logo_highlight,
-    "header__navbar--navlink": navlink,
-    "header__icons--icon": icon,
+    "header__navbar_navlink": navlink,
+    "header__navbar_navlink--active": navlink_active,
+    "header__icons-icon": icon,
     "icon-dark": icon_dark,
   } = headerStyles;
   const { home, products, cart, profile } = endpoint;
@@ -50,6 +51,7 @@ export default function Header({ main }) {
         navlink={navlink}
         home={home}
         products={products}
+        active={navlink_active}
       />
       <Icons
         icons={icons}

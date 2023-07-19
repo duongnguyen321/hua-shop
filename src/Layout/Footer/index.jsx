@@ -8,10 +8,10 @@ export default function Footer() {
   const {
     footer,
     "footer__box-container": box_container,
-    "footer__box-container--box": box,
-    "box-container__box--title": title,
-    "box-container__box--text": text,
-    "box-container__box--link": link,
+    "footer__box-container_box": box,
+    "footer__box-container_title": title,
+    "footer__box-container_text": text,
+    "footer__box-container_link": link,
     footer__credit: credit,
   } = footerStyles;
   const containerProps = {

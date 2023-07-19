@@ -23,8 +23,8 @@ body {
     margin: 0 auto;
     * {
       user-select: none;
-      transition-property: all;
-    }
+      transition-property: var(--transition-property);
+      }
   }
   main {
     @extend header;

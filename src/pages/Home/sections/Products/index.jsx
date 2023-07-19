@@ -44,7 +44,7 @@ export default function SectionProducts() {
                   })}
                 </span>
                 <div className="product__rating">
-                  <span className="product__rating--count">
+                  <span className="product__rating-count">
                     {product.ratings.length} đánh giá
                   </span>
                 </div>

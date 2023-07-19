@@ -6,7 +6,7 @@ export default function Links({ to, type, title, children, className }) {
   return (
     <>
       {location.pathname === to ? (
-        <a href="#" className={className}>
+        <a href="#" className={`${className} highlight`}>
           {title || children}
         </a>
       ) : (

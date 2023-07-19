@@ -1,14 +1,14 @@
 .home {
   &__content {
     text-align: center;
-    &--title {
+    &_title {
       font-size: var(--supper-title);
 
       color: var(--orange);
       text-transform: uppercase;
       text-shadow: var(--shadow);
     }
-    &--subtitle {
+    &_subtitle {
       font-size: var(--font-size-18);
       color: var(--white);
       padding: 0.5rem 0;
@@ -22,7 +22,7 @@
     position: relative;
     top: 5rem;
     align-items: center;
-    &--vid-btn {
+    &_vid-btn {
       height: 2rem;
       width: 2rem;
       display: inline-block;
@@ -30,8 +30,6 @@
       background: #888;
       cursor: pointer;
       margin: 0 0.5rem;
-    }
-    &__vid-btn {
       &--active {
         background: var(--orange);
       }
@@ -52,7 +50,7 @@
     border-radius: 0.5rem;
     overflow: hidden;
     transition-timing-function: linear;
-    &--video {
+    &-video {
       position: absolute;
       top: 0;
       left: 0;
